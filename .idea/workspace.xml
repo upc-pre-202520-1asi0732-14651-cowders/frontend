@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0cd5cc1-03f5-428d-86b1-512c8ffc1302" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="301tFg5liltQWtXPaGBvInuAvVg" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "C:\\Users\\rence\\AppData\\Roaming\\JetBrains\\WebStorm2025.2\\plugins\\Shell Script\\shellcheck.exe",
+    "Shell Script.start.sh.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Moobilesito/VacApp-Frontend-Web-dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "E:\\VacApp\\VacApp-Frontend-Web-dev\\vacapp-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="start.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/vacapp-frontend/start.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/vacapp-frontend" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="cmd.exe" />
+      <option name="INTERPRETER_OPTIONS" value="/c &quot;C:\Program Files\Git\bin\bash.exe&quot;" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.start.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-WS-252.25557.126" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0cd5cc1-03f5-428d-86b1-512c8ffc1302" name="Changes" comment="" />
+      <created>1752806804464</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752806804464</updated>
+      <workItem from="1752806805544" duration="1107000" />
+      <workItem from="1753139937192" duration="66000" />
+      <workItem from="1755426887570" duration="407000" />
+      <workItem from="1755427305372" duration="38000" />
+      <workItem from="1755427349968" duration="956000" />
+      <workItem from="1755647688591" duration="730000" />
+      <workItem from="1755983313434" duration="323000" />
+      <workItem from="1755992158619" duration="2121000" />
+      <workItem from="1755994964004" duration="11134000" />
+      <workItem from="1756009840741" duration="205000" />
+      <workItem from="1756179565242" duration="1269000" />
+      <workItem from="1756181360848" duration="617000" />
+      <workItem from="1756698467091" duration="1617000" />
+      <workItem from="1756865148571" duration="1609000" />
+      <workItem from="1756877028288" duration="578000" />
+      <workItem from="1756933941780" duration="3122000" />
+      <workItem from="1757396974943" duration="217000" />
+      <workItem from="1757397219421" duration="1356000" />
+      <workItem from="1757399973003" duration="312000" />
+      <workItem from="1757570550569" duration="2250000" />
+      <workItem from="1757573531499" duration="194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
