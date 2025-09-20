@@ -54,7 +54,7 @@ const Home: React.FC = () => {
                                 </svg>
                             </div>
                             <h1 className="text-2xl font-bold" style={{ color: '#353330' }}>
-                                VacApp
+                                Moobile
                             </h1>
                         </div>
                         <div className="flex items-center space-x-4">
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                         Welcome to Your Dashboard
                     </h2>
                     <p className="text-xl max-w-2xl mx-auto" style={{ color: '#353330', opacity: 0.8 }}>
-                        Manage your account, explore features, and stay connected with VacApp's powerful platform.
+                        Manage your account, explore features, and stay connected with Moobile's powerful platform.
                     </p>
 
                     {/* Voice Command Instructions */}

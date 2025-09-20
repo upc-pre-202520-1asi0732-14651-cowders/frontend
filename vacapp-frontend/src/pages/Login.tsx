@@ -56,7 +56,7 @@ const Login: React.FC = () => {
             </svg>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome back</h2>
-          <p className="text-gray-600">Sign in to your VacApp account</p>
+          <p className="text-gray-600">Sign in to your Moobile account</p>
         </div>
 
         <div className="bg-white py-8 px-4 shadow-2xl sm:rounded-2xl sm:px-10 backdrop-blur-sm bg-white/80 border border-white/20">

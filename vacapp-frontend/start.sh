@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting VacApp Frontend..."
+echo "Starting Moobile Frontend..."
 echo "Installing dependencies..."
 npm install
 

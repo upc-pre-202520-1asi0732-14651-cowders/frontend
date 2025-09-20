@@ -1,6 +1,6 @@
-# VacApp Frontend
+# Moobile Frontend
 
-A modern React TypeScript frontend application for VacApp with beautiful design, smooth animations, and comprehensive bovines management system.
+A modern React TypeScript frontend application for Moobile with beautiful design, smooth animations, and comprehensive bovines management system.
 
 ## ✨ Features
 
@@ -45,8 +45,8 @@ A modern React TypeScript frontend application for VacApp with beautiful design,
 
 ## 🚀 API Integration
 
-This frontend connects to the VacApp backend API at:
-`https://vacappv2-bxcpfqarbwgpddh8.canadacentral-01.azurewebsites.net`
+This frontend connects to the Moobile backend API at:
+`https://moobile.azurewebsites.net`
 
 ### Authentication Endpoints
 - `POST /api/v1/user/sign-up` - User registration
