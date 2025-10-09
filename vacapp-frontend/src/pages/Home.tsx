@@ -37,6 +37,10 @@ const Home: React.FC = () => {
         navigate('/stables');
     };
 
+    const handleNavigateToVaccines = () => {
+        navigate('/vaccines');
+    };
+
     const handleNavigateToSettings = () => {
         navigate('/settings');
     };
@@ -66,6 +70,20 @@ const Home: React.FC = () => {
                                 </div>
                                 <span className="font-medium" style={{ color: '#353330' }}>Welcome, {user?.username}!</span>
                             </div>
+
+                            {/* Settings Icon Button */}
+                            <button
+                                onClick={handleNavigateToSettings}
+                                className="h-10 w-10 rounded-lg flex items-center justify-center transition duration-200 transform hover:scale-105 shadow-md hover:opacity-90"
+                                style={{ backgroundColor: '#a29f8a' }}
+                                title="Settings"
+                            >
+                                <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </button>
+
                             <button
                                 onClick={handleLogout}
                                 className="text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-200 transform hover:scale-105 shadow-md hover:opacity-90"
@@ -201,29 +219,28 @@ const Home: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Settings */}
+                    {/* Vaccines Management */}
                     <div className="rounded-2xl shadow-xl border p-6 hover:shadow-2xl transition duration-300 transform hover:scale-105" style={{ backgroundColor: '#f7f7f5', borderColor: '#e3e3d9' }}>
                         <div className="flex items-center space-x-4 mb-4">
-                            <div className="h-12 w-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#a29f8a' }}>
+                            <div className="h-12 w-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#99bb99' }}>
                                 <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold" style={{ color: '#353330' }}>Settings</h3>
+                            <h3 className="text-xl font-bold" style={{ color: '#353330' }}>Vaccines Management</h3>
                         </div>
                         <p className="mb-4" style={{ color: '#353330', opacity: 0.8 }}>
-                            Configure your account settings, privacy preferences, and notification options.
+                            Track and manage vaccination records for your livestock. Keep your animals healthy and compliant.
                         </p>
                         <button
-                            onClick={handleNavigateToSettings}
+                            onClick={handleNavigateToVaccines}
                             className="w-full text-white py-2 px-4 rounded-lg font-medium transition duration-200 hover:opacity-90"
-                            style={{ backgroundColor: '#a29f8a' }}
+                            style={{ backgroundColor: '#99bb99' }}
                         >
-                            Open Settings
+                            Manage Vaccines
                         </button>
                         <p className="text-xs mt-2 text-center" style={{ color: '#353330', opacity: 0.6 }}>
-                            Comando de voz: "Vicky, quiero ver mi configuración"
+                            Comando de voz: "Vicky, quiero ver las vacunas"
                         </p>
                     </div>
                 </div>
