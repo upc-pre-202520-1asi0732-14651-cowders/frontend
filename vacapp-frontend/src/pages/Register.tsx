@@ -202,7 +202,7 @@ const Register: React.FC = () => {
 
                     <div className="mt-6 p-4 bg-purple-50 border-2 border-purple-300 rounded-lg">
                       <p className="text-sm font-semibold text-purple-900">
-                        ⚠️ Al hacer clic en "Acepto", confirmo que he leído y acepto los términos del Acuerdo de Servicio SaaS de Moobile.
+                        Al hacer clic en "Acepto", confirmo que he leído y acepto los términos del Acuerdo de Servicio de Moobile.
                       </p>
                     </div>
                   </div>
