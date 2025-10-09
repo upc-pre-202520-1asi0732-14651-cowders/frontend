@@ -15,7 +15,7 @@ api.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('token');
         if (token) {
-            config.headers.Authorization = Bearer ${token};
+            config.headers.Authorization = `Bearer ${token}`;
         }
         return config;
     },
@@ -231,24 +231,24 @@ export const bovinesApi = {
     },
 
     getBovineById: async (id: number): Promise<Bovine> => {
-        const response = await api.get(/bovines/${id});
+        const response = await api.get(`/bovines/${id}`);
         return response.data;
     },
 
     updateBovine: async (id: number, data: UpdateBovineRequest): Promise<Bovine> => {
-        const response = await api.put(/bovines/${id}, {
+        const response = await api.put(`/bovines/${id}`, {
             Name: data.name,
-                Gender: data.gender,
-                BirthDate: data.birthDate,
-                Breed: data.breed,
-                Location: data.location,
-                StableId: data.stableId
+            Gender: data.gender,
+            BirthDate: data.birthDate,
+            Breed: data.breed,
+            Location: data.location,
+            StableId: data.stableId
         });
         return response.data;
     },
 
     deleteBovine: async (id: number): Promise<void> => {
-        const response = await api.delete(/bovines/${id});
+        const response = await api.delete(`/bovines/${id}`);
         return response.data;
     },
 };
@@ -265,17 +265,17 @@ export const stablesApi = {
     },
 
     getStableById: async (id: number): Promise<Stable> => {
-        const response = await api.get(/stables/${id});
+        const response = await api.get(`/stables/${id}`);
         return response.data;
     },
 
     updateStable: async (id: number, data: UpdateStableRequest): Promise<Stable> => {
-        const response = await api.put(/stables/${id}, data);
+        const response = await api.put(`/stables/${id}`, data);
         return response.data;
     },
 
     deleteStable: async (id: number): Promise<void> => {
-        const response = await api.delete(/stables/${id});
+        const response = await api.delete(`/stables/${id}`);
         return response.data;
     },
 };
@@ -306,27 +306,27 @@ export const vaccinesApi = {
     },
 
     getVaccineById: async (id: number): Promise<Vaccine> => {
-        const response = await api.get(/vaccines/${id});
+        const response = await api.get(`/vaccines/${id}`);
         return response.data;
     },
 
     getVaccinesByBovineId: async (bovineId: number): Promise<Vaccine[]> => {
-        const response = await api.get(/vaccines/bovine/${bovineId});
+        const response = await api.get(`/vaccines/bovine/${bovineId}`);
         return response.data;
     },
 
     updateVaccine: async (id: number, data: UpdateVaccineRequest): Promise<Vaccine> => {
-        const response = await api.put(/vaccines/${id}, {
+        const response = await api.put(`/vaccines/${id}`, {
             Name: data.name,
-                VaccineType: data.vaccineType,
-                VaccineDate: data.vaccineDate,
-                BovineId: data.bovineId
+            VaccineType: data.vaccineType,
+            VaccineDate: data.vaccineDate,
+            BovineId: data.bovineId
         });
         return response.data;
     },
 
     deleteVaccine: async (id: number): Promise<void> => {
-        const response = await api.delete(/vaccines/${id});
+        const response = await api.delete(`/vaccines/${id}`);
         return response.data;
     },
 };
@@ -355,12 +355,12 @@ export const voiceCommandApi = {
     },
 
     getVoiceCommandsPaginated: async (page: number = 0, size: number = 10): Promise<{ success: boolean; data: VoiceCommandRecord[]; page: number; size: number; count: number }> => {
-        const response = await api.get(/voice-command/paginated?page=${page}&size=${size});
+        const response = await api.get(`/voice-command/paginated?page=${page}&size=${size}`);
         return response.data;
     },
 
     getVoiceCommandById: async (id: number): Promise<{ success: boolean; data: VoiceCommandRecord }> => {
-        const response = await api.get(/voice-command/${id});
+        const response = await api.get(`/voice-command/${id}`);
         return response.data;
     },
 
