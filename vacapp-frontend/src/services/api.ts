@@ -75,6 +75,62 @@ export interface CreateBovineRequest {
     stableId: number;
 }
 
+export interface Goal {
+    id: number;
+    description: string;
+    metric: string;
+    targetValue: number;
+    currentValue: number;
+    campaignId: number;
+}
+
+export interface Channel {
+    id: number;
+    type: string;
+    details: string;
+    campaignId: number;
+}
+
+export interface Campaign {
+    id: number;
+    name: string;
+    description: string;
+    startDate: string;
+    endDate: string;
+    status: string;
+    goals: Goal[];
+    channels: Channel[];
+    stableId?: number;
+    campaignUserId?: number;
+}
+
+export interface CreateCampaignRequest {
+    name: string;
+    description: string;
+    startDate: string;
+    endDate: string;
+    status: string;
+    goals: Omit<Goal, 'id' | 'campaignId'>[];
+    channels: Omit<Channel, 'id' | 'campaignId'>[];
+    stableId?: number;
+}
+
+export interface UpdateCampaignStatusRequest {
+    status: string;
+}
+
+export interface AddGoalToCampaignRequest {
+    description: string;
+    metric: string;
+    targetValue: number;
+    currentValue: number;
+}
+
+export interface AddChannelToCampaignRequest {
+    type: string;
+    details: string;
+}
+
 export interface UpdateBovineRequest {
     name: string;
     gender: string;
@@ -327,6 +383,62 @@ export const vaccinesApi = {
 
     deleteVaccine: async (id: number): Promise<void> => {
         const response = await api.delete(`/vaccines/${id}`);
+        return response.data;
+    },
+};
+
+export const campaignsApi = {
+    getAllCampaigns: async (): Promise<Campaign[]> => {
+        const response = await api.get('/campaigns');
+        return response.data;
+    },
+
+    createCampaign: async (data: CreateCampaignRequest): Promise<Campaign> => {
+        const response = await api.post('/campaigns', data);
+        return response.data;
+    },
+
+    getCampaignById: async (id: number): Promise<Campaign> => {
+        const response = await api.get(`/campaigns/${id}`);
+        return response.data;
+    },
+
+    deleteCampaign: async (id: number): Promise<{ message: string }> => {
+        const response = await api.delete(`/campaigns/${id}`);
+        return response.data;
+    },
+
+    updateCampaignStatus: async (
+        id: number,
+        data: UpdateCampaignStatusRequest
+    ): Promise<Campaign> => {
+        const response = await api.patch(`/campaigns/${id}/update-status`, data);
+        return response.data;
+    },
+
+    addGoalToCampaign: async (
+        id: number,
+        data: AddGoalToCampaignRequest
+    ): Promise<Campaign> => {
+        const response = await api.patch(`/campaigns/${id}/add-goal`, data);
+        return response.data;
+    },
+
+    addChannelToCampaign: async (
+        id: number,
+        data: AddChannelToCampaignRequest
+    ): Promise<Campaign> => {
+        const response = await api.patch(`/campaigns/${id}/add-channel`, data);
+        return response.data;
+    },
+
+    getGoalsFromCampaign: async (id: number): Promise<Goal[]> => {
+        const response = await api.get(`/campaigns/${id}/goals`);
+        return response.data;
+    },
+
+    getChannelsFromCampaign: async (id: number): Promise<Channel[]> => {
+        const response = await api.get(`/campaigns/${id}/channels`);
         return response.data;
     },
 };

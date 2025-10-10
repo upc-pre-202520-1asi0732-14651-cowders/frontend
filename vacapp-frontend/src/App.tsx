@@ -17,6 +17,9 @@ import AddVaccine from './pages/AddVaccine';
 import VaccineDetails from './pages/VaccineDetails';
 import EditVaccine from './pages/EditVaccine';
 import Settings from './pages/Settings';
+import Campaigns from './pages/Campaigns';
+import AddCampaign from './pages/AddCampaign';
+import CampaignDetails from './pages/CampaignDetails';
 import './App.css';
 import VoiceCommandComponent from "./components/VoiceCommandComponent.tsx";
 
@@ -129,6 +132,30 @@ function App() {
                             element={
                                 <ProtectedRoute>
                                     <EditVaccine />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/campaigns"
+                            element={
+                                <ProtectedRoute>
+                                    <Campaigns />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/campaigns/add"
+                            element={
+                                <ProtectedRoute>
+                                    <AddCampaign />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/campaigns/:id"
+                            element={
+                                <ProtectedRoute>
+                                    <CampaignDetails />
                                 </ProtectedRoute>
                             }
                         />
