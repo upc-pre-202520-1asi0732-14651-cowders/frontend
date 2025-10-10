@@ -20,6 +20,10 @@ import Settings from './pages/Settings';
 import Campaigns from './pages/Campaigns';
 import AddCampaign from './pages/AddCampaign';
 import CampaignDetails from './pages/CampaignDetails';
+import Staffs from './pages/Staffs';
+import AddStaff from './pages/AddStaff';
+import StaffDetails from './pages/StaffDetails';
+import EditStaff from './pages/EditStaff';
 import './App.css';
 import VoiceCommandComponent from "./components/VoiceCommandComponent.tsx";
 
@@ -156,6 +160,38 @@ function App() {
                             element={
                                 <ProtectedRoute>
                                     <CampaignDetails />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/staff"
+                            element={
+                                <ProtectedRoute>
+                                    <Staffs />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/staff/add"
+                            element={
+                                <ProtectedRoute>
+                                    <AddStaff />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/staff/:id"
+                            element={
+                                <ProtectedRoute>
+                                    <StaffDetails />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/staff/edit/:id"
+                            element={
+                                <ProtectedRoute>
+                                    <EditStaff />
                                 </ProtectedRoute>
                             }
                         />

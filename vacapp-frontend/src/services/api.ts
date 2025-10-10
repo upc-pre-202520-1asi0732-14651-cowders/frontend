@@ -227,6 +227,39 @@ export interface VoiceCommandStats {
     commandsByType: Record<string, number>;
 }
 
+export interface Staff {
+    id: number;
+    name: string;
+    employeeStatus: number;
+    campaignId: number | null;
+    staffUserId: number;
+}
+
+export interface CreateStaffRequest {
+    name: string;
+    employeeStatus: number;
+    campaignId: number;
+}
+
+export interface UpdateStaffRequest {
+    name: string;
+    employeeStatus: number;
+    campaignId: number | null;
+}
+
+export interface DeleteStaffResponse {
+    message: string;
+}
+
+// Employee Status Enum for reference
+export enum EmployeeStatus {
+    Active = 1,
+    Inactive = 2,
+    OnLeave = 3,
+    Retired = 4,
+    Terminated = 5
+}
+
 export const authApi = {
     signUp: async (data: SignUpRequest): Promise<AuthResponse> => {
         const response = await api.post('/user/sign-up', data);
@@ -439,6 +472,73 @@ export const campaignsApi = {
 
     getChannelsFromCampaign: async (id: number): Promise<Channel[]> => {
         const response = await api.get(`/campaigns/${id}/channels`);
+        return response.data;
+    },
+};
+
+export const staffApi = {
+    /**
+     * Creates a new staff member
+     */
+    createStaff: async (data: CreateStaffRequest): Promise<Staff> => {
+        const response = await api.post('/staff', data);
+        return response.data;
+    },
+
+    /**
+     * Gets all staff members for the authenticated user
+     */
+    getAllStaff: async (): Promise<Staff[]> => {
+        const response = await api.get('/staff');
+        return response.data;
+    },
+
+    /**
+     * Gets a staff member by ID
+     */
+    getStaffById: async (id: number): Promise<Staff> => {
+        const response = await api.get(`/staff/${id}`);
+        return response.data;
+    },
+
+    /**
+     * Gets all staff members by campaign ID
+     */
+    getStaffByCampaignId: async (campaignId: number): Promise<Staff[]> => {
+        const response = await api.get(`/staff/search-by-campaign/${campaignId}`);
+        return response.data;
+    },
+
+    /**
+     * Gets all staff members by employee status
+     * @param employeeStatus - 1: Active, 2: Inactive, 3: OnLeave, 4: Retired, 5: Terminated
+     */
+    getStaffByEmployeeStatus: async (employeeStatus: number): Promise<Staff[]> => {
+        const response = await api.get(`/staff/search-by-employee-status/${employeeStatus}`);
+        return response.data;
+    },
+
+    /**
+     * Gets a staff member by name
+     */
+    getStaffByName: async (name: string): Promise<Staff> => {
+        const response = await api.get(`/staff/search-by-name/${name}`);
+        return response.data;
+    },
+
+    /**
+     * Updates a staff member by ID
+     */
+    updateStaff: async (id: number, data: UpdateStaffRequest): Promise<Staff> => {
+        const response = await api.put(`/staff/${id}`, data);
+        return response.data;
+    },
+
+    /**
+     * Deletes a staff member by ID
+     */
+    deleteStaff: async (id: number): Promise<DeleteStaffResponse> => {
+        const response = await api.delete(`/staff/${id}`);
         return response.data;
     },
 };

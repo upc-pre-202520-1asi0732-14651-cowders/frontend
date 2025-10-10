@@ -49,6 +49,10 @@ const Home: React.FC = () => {
         navigate('/campaigns');
     };
 
+    const handleNavigateToStaffs = () => {
+        navigate('/staff');
+    };
+
     return (
         <div className="min-h-screen" style={{ backgroundColor: '#f2f0e9' }}>
             {/* Navigation */}
@@ -270,6 +274,31 @@ const Home: React.FC = () => {
                         </button>
                         <p className="text-xs mt-2 text-center" style={{ color: '#353330', opacity: 0.6 }}>
                             Comando de voz: "Vicky, quiero ver mis campañas"
+                        </p>
+                    </div>
+
+                    {/* Staffs Management */}
+                    <div className="rounded-2xl shadow-xl border p-6 hover:shadow-2xl transition duration-300 transform hover:scale-105" style={{ backgroundColor: '#f7f7f5', borderColor: '#e3e3d9' }}>
+                        <div className="flex items-center space-x-4 mb-4">
+                            <div className="h-12 w-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#99bb99' }}>
+                                <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M9 20h6v-2a6 6 0 00-12 0v2m6-9a4 4 0 100-8 4 4 0 000 8m8 0a4 4 0 100-8 4 4 0 000 8" />
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-bold" style={{ color: '#353330' }}>Staffs Management</h3>
+                        </div>
+                        <p className="mb-4" style={{ color: '#353330', opacity: 0.8 }}>
+                            Add, edit, and manage staff assignments across campaigns.
+                        </p>
+                        <button
+                            onClick={handleNavigateToStaffs}
+                            className="w-full text-white py-2 px-4 rounded-lg font-medium transition duration-200 hover:opacity-90"
+                            style={{ backgroundColor: '#99bb99' }}
+                        >
+                            Manage Staffs
+                        </button>
+                        <p className="text-xs mt-2 text-center" style={{ color: '#353330', opacity: 0.6 }}>
+                            Comando de voz: "Vicky, quiero ver mi personal"
                         </p>
                     </div>
                 </div>
